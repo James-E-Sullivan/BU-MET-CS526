@@ -55,18 +55,28 @@ public class ArrayControlPractice {
 
     public static void main (String[] args){
 
-        int testSum100 = sumOfEvenNumbers(100);
-        int testSum200 = sumOfEvenNumbers(200);
+        // 2 tests of sumOfEvenNumbers method
+        int testSum100 = sumOfEvenNumbers(100);     // returns sum of even integers from 0-100 (inclusive)
+        int testSum200 = sumOfEvenNumbers(200);     // returns sum of even ints from 0-200 (inclusive)
         System.out.println("Test sumOfEvenNumbers method");
         System.out.println("Sum of even numbers (n=100): " + testSum100);
         System.out.println("Sum of even numbers (n=200): " + testSum200);
 
+        // 1st test of allDistinct method
         int[] testIntArray = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
-                11, 12, 13, 14, 15, 16, 1, 2, 3, 4};
-        Boolean testDistinct = allDistinct(testIntArray);
-        System.out.println("\nTest allDistinctNumbers method");
-        System.out.println("All integers distinct?: " + testDistinct);
+                11, 12, 13, 14, 15, 16, 1, 2, 3, 4};            // integer array with 20 values, some duplicates
+        Boolean testDistinct = allDistinct(testIntArray);       // return false if there are duplicates, otherwise true
+        System.out.println("\n1st test of allDistinctNumbers method");
+        System.out.println("All integers distinct?: " + testDistinct);  // should output "false"
 
+        // 2nd test of allDistinct method
+        int[] testIntArray2 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+                11, 12, 13, 14, 15, 16, 17, 18, 19, 20};        // integer array with 20 values, no duplicates
+        Boolean testDistinct2 = allDistinct(testIntArray2);
+        System.out.println("\n2nd test of allDistinctNumbers method");
+        System.out.println("All integers distinct?: " + testDistinct2); // should output "true"
+
+        // first test statistics method
         double[] testDoubleArray = {1.0, 3.0, 4.5, 3.3, 10.2, 11.0, 7.9, 8.8, 2.5, 21.0};
         double[] testStatistics = statistics(testDoubleArray);
         System.out.println("\nTest statistics method (test 1)");
@@ -74,6 +84,7 @@ public class ArrayControlPractice {
         System.out.println("Min: " + testStatistics[1]);
         System.out.println("Avg: " + testStatistics[2]);
 
+        // second test of statistics method
         double[] testDoubleArray2 = {5.6, 9.5, 0.3, 34.5, 1.1, 5.0, 17.7, 5.4, 90.0, 2.7};
         double[] testStatistics2 = statistics(testDoubleArray2);
         System.out.println("\nTest statistics method (test 2)");
